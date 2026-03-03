@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Lumiscale | Illuminate Every Pixel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a689fa",
+                        "accent-blue": "#38bdf8",
+                        "lumi-gold": "#f0c060",
+                        "background-light": "#f6f5f8",
+                        "background-dark": "#080810",
+                        "card-dark": "#0f0f1a",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #080810;
+            background-image: radial-gradient(circle at 50% -20%, rgba(166, 137, 250, 0.15), transparent 50%), radial-gradient(circle at 0% 100%, rgba(56, 189, 248, 0.05), transparent 40%)
+        }
+
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBySWKjHoNXR6Ml810NMysAoaEAlVvEjvQBDDeOTWm2j8nNc5u-mP-IJgzSlx-XiQ9sHBRRrIfN6ByD5xP2r0nWp-wT9oZvKL7dglR_mVmY6Zs9Bnv1iUHWmfLEC1_0OnbOii_ncRzsuViRs3SY8NxGYPKNELIXet9qVoR1CfhMH0e80sxHpAegT9nN-LPfujkC_gBn-hsHqW_xTwlmP8bBpE531ag1xAtYVVvxOUdzuPwg6eh0tetHvu_35jjHERjDLl492uyuxlo)
+        }
+
+        .aurora-glow {
+            box-shadow: 0 0 20px rgba(166, 137, 250, 0.2), 0 0 40px rgba(56, 189, 248, 0.1)
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #a78bfa, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent
+        }
+    </style>
+</head>
+
+<body class="font-display text-slate-100 selection:bg-primary/30">
+    <div class="grain"></div>
+    <!-- Sticky Navbar -->
+    <nav class="sticky top-0 z-40 w-full border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <span
+                    class="material-symbols-outlined text-primary text-2xl drop-shadow-[0_0_8px_rgba(166,137,250,0.8)]">flare</span>
+                <span class="text-xl font-bold tracking-tight">Lumiscale</span>
+            </div>
+            <div class="hidden md:block">
+                <p class="text-sm font-medium text-slate-400 italic">Illuminate every pixel</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div
+                    class="px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(166,137,250,0.2)]">
+                    Free Forever
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-5xl mx-auto px-6 pt-20 pb-32">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Your images, <span class="text-gradient">luminously sharp</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                Upscale up to 8x — fully private, runs in your browser.
+                Experience the brilliance of AI-driven clarity.
+            </p>
+        </section>
+        <!-- Upload Zone -->
+        <section class="mb-12">
+            <div class="relative group">
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-primary to-accent-blue rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition duration-1000">
+                </div>
+                <div
+                    class="relative bg-card-dark border-2 border-dashed border-white/10 rounded-[2rem] p-12 md:p-20 flex flex-col items-center justify-center text-center hover:border-primary/50 transition-colors cursor-pointer">
+                    <div
+                        class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 ring-1 ring-primary/20">
+                        <span class="material-symbols-outlined text-4xl text-primary">cloud_upload</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Drop your masterpiece here</h3>
+                    <p class="text-slate-400 mb-8">Supports JPG, PNG, WEBP up to 20MB</p>
+                    <button
+                        class="px-8 py-4 bg-gradient-to-r from-primary to-accent-blue rounded-xl font-bold text-background-dark hover:scale-105 transition-transform aurora-glow">
+                        Select File
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Workspace Section (Post-Upload Conceptualization) -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            <!-- Left: Comparison View -->
+            <div class="lg:col-span-2 space-y-6">
+                <div class="bg-card-dark rounded-3xl p-4 border border-white/5 overflow-hidden">
+                    <div class="relative aspect-video rounded-2xl overflow-hidden bg-black group/slider">
+                        <img alt="Abstract fluid art background" class="w-full h-full object-cover"
+                            data-alt="Abstract colorful fluid art wave pattern"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWaV4Tx86IHDNJOatf98hmxtEk9cTkFFgEe8J982Su1YXM7DGHI8iWYNxqXVR8jSetE6Aw_2EcOFeOulC7cC2vOS9LaPVMl-PcXUJldSwT59tdXUavj7N-No_nO523wSBEj7DX_Oj76RFvPCrFQAN7sM2hQG8_Sn19OCmaPbiG3_5yG-ZVhG91y2sahCBqDo6_Aa1brrcmgG6hLKKPdkbjnXqqm3PfJ4HIOOgbmKcfewmqcn28ko4OHcQXvBUJakJT9P4wepew1ng" />
+                        <!-- Slider Handle Simulation -->
+                        <div
+                            class="absolute inset-y-0 left-1/2 w-1 bg-white/50 backdrop-blur-md shadow-[0_0_15px_rgba(255,255,255,0.5)] z-10 cursor-ew-resize">
+                            <div
+                                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                <span class="material-symbols-outlined text-slate-900 text-sm">unfold_more</span>
+                            </div>
+                        </div>
+                        <!-- Labels -->
+                        <div
+                            class="absolute bottom-4 left-4 px-3 py-1 bg-black/50 backdrop-blur-md rounded text-xs font-bold uppercase tracking-widest">
+                            Original</div>
+                        <div
+                            class="absolute bottom-4 right-4 px-3 py-1 bg-primary/50 backdrop-blur-md rounded text-xs font-bold uppercase tracking-widest border border-primary/30">
+                            Luminescent 8x</div>
+                    </div>
+                </div>
+                <!-- Comparison Meta -->
+                <div class="flex justify-between items-center px-4">
+                    <div class="flex items-center gap-2 text-slate-400">
+                        <span class="material-symbols-outlined text-sm">info</span>
+                        <span class="text-xs">Processing locally on your GPU</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs text-slate-500 uppercase tracking-tighter font-bold">Zoom: 100%</span>
+                        <div class="flex gap-1">
+                            <button
+                                class="w-8 h-8 rounded bg-white/5 hover:bg-white/10 flex items-center justify-center"><span
+                                    class="material-symbols-outlined text-sm">remove</span></button>
+                            <button
+                                class="w-8 h-8 rounded bg-white/5 hover:bg-white/10 flex items-center justify-center"><span
+                                    class="material-symbols-outlined text-sm">add</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Controls -->
+            <div class="bg-card-dark rounded-3xl p-8 border border-white/5 space-y-8">
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Upscale
+                        Factor</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button
+                            class="py-3 rounded-xl border border-white/10 text-sm font-bold hover:bg-white/5 transition-colors">2x</button>
+                        <button
+                            class="py-3 rounded-xl border-2 border-primary bg-primary/10 text-primary text-sm font-bold shadow-[0_0_15px_rgba(166,137,250,0.1)]">4x</button>
+                        <button
+                            class="py-3 rounded-xl border border-white/10 text-sm font-bold hover:bg-white/5 transition-colors">8x</button>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Enhancement
+                        Progress</label>
+                    <div class="h-2 w-full bg-white/5 rounded-full overflow-hidden mb-2">
+                        <div class="h-full w-[65%] bg-gradient-to-r from-primary to-accent-blue rounded-full relative">
+                            <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-primary/80 font-medium">Analysing pixels... 65%</p>
+                </div>
+                <div class="space-y-3 pt-4">
+                    <button
+                        class="w-full py-4 bg-gradient-to-r from-primary to-accent-blue rounded-xl font-bold text-background-dark hover:shadow-[0_0_30px_rgba(166,137,250,0.4)] transition-all">
+                        Enhance Details
+                    </button>
+                    <button
+                        class="w-full py-4 border border-lumi-gold/50 bg-lumi-gold/10 text-lumi-gold rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-lumi-gold/20 transition-all">
+                        <span class="material-symbols-outlined text-xl">download</span>
+                        Download Result
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Trust Badges -->
+        <section class="mt-24 pt-12 border-t border-white/5">
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+                <div
+                    class="flex items-center gap-2 px-6 py-3 bg-white/5 rounded-full border border-white/5 backdrop-blur-sm">
+                    <span class="material-symbols-outlined text-primary text-xl">shield_person</span>
+                    <span class="text-sm font-semibold text-slate-300 tracking-wide uppercase">100% Private</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 px-6 py-3 bg-white/5 rounded-full border border-white/5 backdrop-blur-sm">
+                    <span class="material-symbols-outlined text-accent-blue text-xl">cloud_off</span>
+                    <span class="text-sm font-semibold text-slate-300 tracking-wide uppercase">No Server Upload</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 px-6 py-3 bg-white/5 rounded-full border border-white/5 backdrop-blur-sm">
+                    <span class="material-symbols-outlined text-lumi-gold text-xl">payments</span>
+                    <span class="text-sm font-semibold text-slate-300 tracking-wide uppercase">Zero Cost</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-background-dark">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex items-center gap-2 opacity-50 grayscale">
+                    <span class="material-symbols-outlined text-primary text-xl">flare</span>
+                    <span class="text-lg font-bold tracking-tight">Lumiscale</span>
+                </div>
+                <p class="text-slate-500 text-sm">Illuminate every pixel © 2024. Localized AI Power.</p>
+                <div class="flex gap-6 mt-4">
+                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold"
+                        href="#">Terms</a>
+                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold"
+                        href="#">Privacy</a>
+                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold"
+                        href="#">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
