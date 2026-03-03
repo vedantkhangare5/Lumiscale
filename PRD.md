@@ -90,7 +90,7 @@ Lumiscale is a browser-based AI image upscaling web app. Users drag and drop an 
 
 ### 4.6 Footer
 - Faded Lumiscale logo
-- "Illuminate every pixel © 2025. Localized AI Power."
+- "Illuminate every pixel © 2026. Localized AI Power."
 - Links: Terms · Privacy · GitHub
 
 ---

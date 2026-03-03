@@ -66,6 +66,7 @@
         .text-gradient {
             background: linear-gradient(to right, #a78bfa, #38bdf8);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent
         }
 
@@ -337,6 +338,76 @@
         </section>
     </main>
 
+    <!-- Terms Modal -->
+    <div id="termsModal" class="fixed inset-0 z-[60] flex items-center justify-center p-4" style="display:none;">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('termsModal')"></div>
+        <div
+            class="relative bg-card-dark border border-white/10 rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 shadow-2xl">
+            <button onclick="closeModal('termsModal')"
+                class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
+                <span class="material-symbols-outlined text-slate-400 text-lg">close</span>
+            </button>
+            <h2 class="text-2xl font-bold mb-6 text-gradient">Terms of Service</h2>
+            <div class="space-y-4 text-sm text-slate-400 leading-relaxed">
+                <p class="text-slate-300 font-medium">Last updated: March 2026</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">1. Acceptance of Terms</h3>
+                <p>By accessing and using Lumiscale, you agree to be bound by these Terms of Service. If you do not
+                    agree, please do not use the application.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">2. Service Description</h3>
+                <p>Lumiscale is a free, browser-based image upscaling tool. All image processing occurs entirely on your
+                    device — no images are uploaded to any server.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">3. Usage</h3>
+                <p>You may use Lumiscale for personal and commercial purposes. You retain full ownership of all images
+                    you process. We do not claim any rights to your content.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">4. No Warranty</h3>
+                <p>Lumiscale is provided "as is" without warranty of any kind. We do not guarantee that the service will
+                    be uninterrupted, error-free, or that results will meet your expectations.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">5. Limitation of Liability</h3>
+                <p>In no event shall Lumiscale or its creators be liable for any indirect, incidental, or consequential
+                    damages arising from the use of this application.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">6. Changes</h3>
+                <p>We reserve the right to modify these terms at any time. Continued use of Lumiscale constitutes
+                    acceptance of updated terms.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Modal -->
+    <div id="privacyModal" class="fixed inset-0 z-[60] flex items-center justify-center p-4" style="display:none;">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('privacyModal')"></div>
+        <div
+            class="relative bg-card-dark border border-white/10 rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 md:p-10 shadow-2xl">
+            <button onclick="closeModal('privacyModal')"
+                class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors">
+                <span class="material-symbols-outlined text-slate-400 text-lg">close</span>
+            </button>
+            <h2 class="text-2xl font-bold mb-6 text-gradient">Privacy Policy</h2>
+            <div class="space-y-4 text-sm text-slate-400 leading-relaxed">
+                <p class="text-slate-300 font-medium">Last updated: March 2026</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">1. Zero Data Collection</h3>
+                <p>Lumiscale does not collect, store, or transmit any personal data. We have no servers, databases, or
+                    analytics tracking. Your privacy is absolute.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">2. Image Processing</h3>
+                <p>All image processing happens entirely within your browser using client-side JavaScript and the Canvas
+                    API. Your images never leave your device — they are not uploaded, cached, or stored anywhere.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">3. Cookies &amp; Local Storage</h3>
+                <p>Lumiscale does not use cookies, local storage, or any other browser storage mechanisms to track or
+                    identify users.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">4. Third-Party Services</h3>
+                <p>Lumiscale loads fonts from Google Fonts and the Tailwind CSS framework from a CDN. These services may
+                    have their own privacy policies. No other third-party services are used.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">5. Open Source</h3>
+                <p>Lumiscale is open source. You can inspect the entire codebase on <a
+                        href="https://github.com/vedantkhangare5/Lumiscale" target="_blank" rel="noopener noreferrer"
+                        class="text-primary hover:underline">GitHub</a> to verify these claims.</p>
+                <h3 class="text-base font-semibold text-slate-200 pt-2">6. Contact</h3>
+                <p>For any privacy-related questions, please open an issue on our <a
+                        href="https://github.com/vedantkhangare5/Lumiscale" target="_blank" rel="noopener noreferrer"
+                        class="text-primary hover:underline">GitHub repository</a>.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="py-12 border-t border-white/5 bg-background-dark">
         <div class="max-w-7xl mx-auto px-6 text-center">
@@ -345,14 +416,15 @@
                     <span class="material-symbols-outlined text-primary text-xl">flare</span>
                     <span class="text-lg font-bold tracking-tight">Lumiscale</span>
                 </div>
-                <p class="text-slate-500 text-sm">Illuminate every pixel © 2025. Localized AI Power.</p>
+                <p class="text-slate-500 text-sm">Illuminate every pixel © 2026. Localized AI Power.</p>
                 <div class="flex gap-6 mt-4">
+                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold cursor-pointer"
+                        onclick="openModal('termsModal')">Terms</a>
+                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold cursor-pointer"
+                        onclick="openModal('privacyModal')">Privacy</a>
                     <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold"
-                        href="#">Terms</a>
-                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold"
-                        href="#">Privacy</a>
-                    <a class="text-xs text-slate-600 hover:text-primary transition-colors uppercase tracking-widest font-bold"
-                        href="#">GitHub</a>
+                        href="https://github.com/vedantkhangare5/Lumiscale" target="_blank"
+                        rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
@@ -854,6 +926,23 @@
                 });
 
             })();
+
+        // ── Modal helpers (global scope for onclick attributes) ──
+        function openModal(id) {
+            document.getElementById(id).style.display = '';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                ['termsModal', 'privacyModal'].forEach(id => {
+                    if (document.getElementById(id).style.display !== 'none') closeModal(id);
+                });
+            }
+        });
     </script>
 </body>
 
