@@ -62,4 +62,4 @@ Because I wanted anyone to be able to download it, send it to a friend, or host 
 
 ---
 
-Made with ✦ by Vedant Khangare(https://github.com/vedantkhangare5)
+Made with ✦ by [Vedant Khangare](https://github.com/vedantkhangare5)
